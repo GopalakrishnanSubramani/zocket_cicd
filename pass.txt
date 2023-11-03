@@ -1,0 +1,9 @@
+http://localhost:8080/
+
+http://localhost:9000/
+
+sonar pass --> sonar
+
+usname --> jenkins
+pass -> jenkins
+
