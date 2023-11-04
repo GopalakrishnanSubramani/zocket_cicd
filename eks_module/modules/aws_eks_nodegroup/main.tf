@@ -72,7 +72,7 @@ resource "aws_iam_role" "nodes_general" {
       "Principal": {
         "Service": "eks.amazonaws.com"
       },
-      "Action": ["sts:AssumeRole"
+      "Action": ["sts:AssumeRole",
                 "eks:ListFargateProfiles",
                 "eks:DescribeNodegroup",
                 "eks:ListNodegroups",
