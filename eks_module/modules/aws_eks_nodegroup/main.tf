@@ -70,28 +70,10 @@ resource "aws_iam_role" "nodes_general" {
     {
       "Effect": "Allow",
       "Principal": {
-        "Service": "eks.amazonaws.com"
-      },
-      "Action": ["sts:AssumeRole",
-                "eks:ListFargateProfiles",
-                "eks:DescribeNodegroup",
-                "eks:ListNodegroups",
-                "eks:ListUpdates",
-                "eks:AccessKubernetesApi",
-                "eks:ListAddons",
-                "eks:DescribeCluster",
-                "eks:DescribeAddonVersions",
-                "eks:ListClusters",
-                "eks:ListIdentityProviderConfigs",
-                "iam:ListRoles"
-      ],
-       "Resource": "*"
-    },
-        {
-            "Effect": "Allow",
-            "Action": "ssm:GetParameter",
-            "Resource": "arn:aws:ssm:*:407690876963:parameter/*"
-        }
+        "Service": "ec2.amazonaws.com"
+      }, 
+      "Action": "sts:AssumeRole"
+    }
   ]
 }
 POLICY
@@ -122,7 +104,6 @@ resource "aws_iam_role_policy_attachment" "amazon_ec2_container_registry_read_on
   # The role the policy should be applied to
   role = aws_iam_role.nodes_general.name
 }
-
 
 
 

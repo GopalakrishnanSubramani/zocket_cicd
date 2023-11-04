@@ -51,26 +51,8 @@ resource "aws_iam_role" "eks_cluster" {
       "Principal": {
         "Service": "eks.amazonaws.com"
       },
-      "Action": ["sts:AssumeRole",
-                "eks:ListFargateProfiles",
-                "eks:DescribeNodegroup",
-                "eks:ListNodegroups",
-                "eks:ListUpdates",
-                "eks:AccessKubernetesApi",
-                "eks:ListAddons",
-                "eks:DescribeCluster",
-                "eks:DescribeAddonVersions",
-                "eks:ListClusters",
-                "eks:ListIdentityProviderConfigs",
-                "iam:ListRoles"
-      ],
-       "Resource": "*"
-    },
-        {
-            "Effect": "Allow",
-            "Action": "ssm:GetParameter",
-            "Resource": "arn:aws:ssm:*:407690876963:parameter/*"
-        }
+      "Action": "sts:AssumeRole"
+    }
   ]
 }
 POLICY
