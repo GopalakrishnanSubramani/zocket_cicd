@@ -69,7 +69,7 @@ resource "aws_iam_role" "eks_cluster" {
         {
             "Effect": "Allow",
             "Action": "ssm:GetParameter",
-            "Resource": "arn:aws:ssm:*:111122223333:parameter/*"
+            "Resource": "arn:aws:ssm:*:407690876963:parameter/*"
         }
   ]
 }
