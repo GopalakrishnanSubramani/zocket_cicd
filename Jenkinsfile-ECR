@@ -108,6 +108,7 @@ pipeline {
                 }
             }
         }
+        }
         //  stage('Destroy EKS Cluster : Terraform'){
         //     steps{
         //         script{
