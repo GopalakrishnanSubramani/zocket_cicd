@@ -11,10 +11,27 @@ spec:
     spec:
       containers:
         - name: cloudl-server
-          image: kavinduchamiran/cloudl-server:latest
+          image: krishgopal37/cloudl-server:latest
           ports:
             - containerPort: 5000
               name: nodejs-port
+          livenessProbe:
+            httpGet:
+              port: nodejs-port
+              path: /health
+            initialDelaySeconds: 15
+            timeoutSeconds: 30
+          readinessProbe:
+            httpGet:
+              port: nodejs-port
+              path: /ready
+            initialDelaySeconds: 15
+            timeoutSeconds: 30
+          resources:
+            requests:
+              cpu: 200m
+            limits:
+              cpu: 300m
   selector:
     matchLabels:
       app: cloudl-server
