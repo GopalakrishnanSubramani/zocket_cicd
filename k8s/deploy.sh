@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash bash
 
 kubectl apply -f cloudl-pv.yml
 kubectl apply -f cloudl-pv-claim.yml
