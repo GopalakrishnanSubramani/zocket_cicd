@@ -1,4 +1,4 @@
-# Standford cars classfication web app deployment using Pytorch and Flask 💵💳
+# Zocket DevOps Engineer Assginment - Kubernetes deployment 💵💳
 
 <p align="center">
   <img width="800" height="400" src="imgs/zocket.png">
