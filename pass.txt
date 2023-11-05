@@ -15,5 +15,5 @@ solve  client.authentication.k8s.io/v1alpha1 has changed to client.authenticatio
 
 https://stackoverflow.com/questions/73744199/unable-to-connect-to-the-server-getting-credentials-decoding-stdout-no-kind
 
-                // aws eks --region ${params.Region} update-kubeconfig --name ${params.cluster}
+aws eks --region ${params.Region} update-kubeconfig --name ${params.cluster}
 
